@@ -1,6 +1,6 @@
 import React from "react";
 import "./modal.css";
-const Modal = ({ sr, handleSwitch }) => {
+const Modal = ({ modalImage, handleSwitch }) => {
   return (
     <div
       style={{
@@ -12,7 +12,7 @@ const Modal = ({ sr, handleSwitch }) => {
     >
       <div className="mainModal">
         <button onClick={handleSwitch}>X</button>
-        <img src={sr} alt="" />
+        <img src={modalImage} alt="" />
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./result.css";
 import ImageBox from "../ImageBox/";
+import Loader from "../Loader/";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Masonary from "react-masonry-css";
 import Modal from "../Modal/";
 
-const Result = ({ flag, handleSwitch, sr }) => {
+const Result = ({ flag, handleSwitch, modalImage }) => {
   const [images, setImages] = useState([]);
 
   const API = `https://api.unsplash.com/photos/random?client_id=g3bLSaOsb8LyAccVOmrTm9N1bGqYuU9obhNaf4X2K4E&count=10`;
@@ -33,8 +34,10 @@ const Result = ({ flag, handleSwitch, sr }) => {
       dataLength={images.length}
       next={fetchingData}
       hasMore={true}
+      loader={<Loader />}
     >
-      {flag ? <Modal sr={sr} handleSwitch={handleSwitch} /> : null}
+      {flag ? <Modal modalImage={modalImage} handleSwitch={handleSwitch} /> : null}
+
       <Masonary
         breakpointCols={breakPoints}
         className="my-masonry-grid"
