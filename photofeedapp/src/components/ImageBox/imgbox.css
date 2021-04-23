@@ -1,0 +1,10 @@
+.actualImg{
+    border-radius: 7%!important;
+}
+#myImg{
+    margin-top: 20px;
+}
+.actualImg img{
+    border-radius: 7%!important;
+    box-shadow: 10px 10px 10px #888888;
+}
