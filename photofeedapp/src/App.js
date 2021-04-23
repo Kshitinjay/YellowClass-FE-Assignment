@@ -13,10 +13,10 @@ const App=()=> {
   };
   return (
     <div className="App ">
-      <h1>Photo Feed App</h1>
+      <h1 className="animate__animated animate__fadeInDownBig">Photo Feed App</h1>
       <p>The internet’s source of freely-usable images.</p>
       <p>Powered by creators everywhere.</p>
-      <Suspense fallback={<div>PleaseWait...</div>}>
+      <Suspense fallback={<div>Lazy Loading...</div>}>
         <Result
           flag={flag}
           handleSwitch={handleSwitch}
